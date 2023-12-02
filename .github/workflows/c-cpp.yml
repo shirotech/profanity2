@@ -15,5 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: install dependencies
       run: sudo apt-get install -y opencl-headers
+    - name: abc
+      run: sudo ln -s /usr/lib/x86_64-linux-gnu/libOpenCL.so /usr/lib/libOpenCL.so
     - name: make
-      run: make 'LDFLAGS=-L/usr/lib/x86_64-linux-gnu -s -mcmodel=large'
+      run: make all
