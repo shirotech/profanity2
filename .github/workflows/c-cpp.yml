@@ -20,5 +20,5 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: dist
+        name: profanity2.x64
         path: profanity2.x64
