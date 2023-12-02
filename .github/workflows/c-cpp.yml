@@ -17,3 +17,8 @@ jobs:
       run: sudo apt-get install -y opencl-headers ocl-icd-opencl-dev
     - name: make
       run: make all
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: profanity2.x64
