@@ -16,6 +16,6 @@ jobs:
     - name: install dependencies
       run: sudo apt-get install -y opencl-headers
     - name: abc
-      run: sudo ln -s /usr/lib/x86_64-linux-gnu/libOpenCL.so /usr/lib/libOpenCL.so
+      run: sudo mkdir -p /usr/lib/x86_64-linux-gnu/ && sudo ln -s /usr/lib/libOpenCL.so /usr/lib/x86_64-linux-gnu/libOpenCL.so
     - name: make
       run: make all
