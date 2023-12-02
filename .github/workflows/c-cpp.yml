@@ -14,6 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: install dependencies
-      run: sudo apt-get install -y opencl-headers binutils
+      run: sudo apt-get install -y opencl-headers
+    - name: alias
+      run: sudo ln -s /usr/lib/x86_64-linux-gnu/libOpenCL.so.1 /usr/lib/libOpenCL.so
     - name: make
       run: make all
